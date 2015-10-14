@@ -23,9 +23,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^x=4*+k_hlcy-611o%#jqjb2ib_w&-(*i=8h0ph(e+$n=lfa%t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
+
+ADMINS = (
+    ('Roberto Urita', 'roberto.urita@ventamovil.com.mx'),
+    ('Erick Dominguez', 'erick.dominguez@ventamovil.com.mx'),
+    ('Susana Carrillo', 'susana.carrillo@ventamovil.com.mx'),
+)
 
 
 # Application definition
@@ -76,6 +82,8 @@ WSGI_APPLICATION = 'restAndroid.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_URL = '/static/'
 
 DATABASES = {
     'default': {
